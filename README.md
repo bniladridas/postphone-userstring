@@ -6,6 +6,10 @@ Example string:
 
 PostPhone/1.0 (Desktop; NoCell; Progress)
 
+## Python utility
+
+The `userstring` package delivers the same format as a tiny Python API and CLI. Install it with `pip install -e '.[cli]'` to get the optional click-based command or `pip install -e '.[dev]'` when you need the tests. After installation you can import `build_user_agent` or run `python -m userstring.cli` (it falls back to `argparse` when `click` is absent).
+
 ## Repository Structure
 
 metadata/
