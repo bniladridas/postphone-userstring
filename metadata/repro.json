@@ -1,0 +1,8 @@
+{
+  "project": "postphone-userstring",
+  "repro_commands": [
+    "python3 implementations/python/generator.py",
+    "node implementations/javascript/generator.js",
+    "uv run python3 implementations/python/generator.py"
+  ]
+}

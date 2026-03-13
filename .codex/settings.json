@@ -1,0 +1,8 @@
+{
+  "project": "postphone-userstring",
+  "model": "infra-artificial-bureau-intelligence",
+  "model_description": "Conceptual label for this spec-focused tooling profile; not a runtime AI config.",
+  "infrastructure": "codex-protocol-stack",
+  "default_mode": "spec",
+  "notes": "Aligns tooling with a philosophy-centric spec repo, referencing the PostPhone user string identity."
+}
