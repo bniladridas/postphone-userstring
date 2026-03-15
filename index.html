@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostPhone User String</title>
+  <style>
+    :root {
+      font-family: 'Inter', 'Source Sans Pro', system-ui, sans-serif;
+      background-color: #030712;
+      color: #f8fafc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.1), transparent 35%), #030712;
+    }
+    main {
+      min-height: 100vh;
+      padding: 4rem clamp(1.5rem, 3vw, 3rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      background: none;
+    }
+    h1 {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .version {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      color: #8dd6ff;
+    }
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin: 2rem 0 0.25rem;
+      color: #94a3b8;
+    }
+    p {
+      margin: 0.35rem 0 0;
+      line-height: 1.7;
+      color: #e2e8f0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+    }
+    th,
+    td {
+      padding: 0.65rem 0.5rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(248, 250, 252, 0.12);
+    }
+    th {
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      background: rgba(248, 250, 252, 0.08);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(248, 250, 252, 0.15);
+      display: inline-block;
+      margin-top: 0.75rem;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    @media (max-width: 640px) {
+      main {
+        padding: 2rem 1.25rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>PostPhone User String</h1>
+      <p>A quiet protocol that signals focus, intentional computing, and steady progress.</p>
+      <p class="version">Version 0.1.0</p>
+      <code>PostPhone/1.0 (Desktop; NoCell; Progress)</code>
+    </header>
+
+    <section>
+      <h2>Context</h2>
+      <p>The spec folder defines the structure, the philosophy folder names the intention, the reference folder offers examples, and the implementations folder keeps terse generators in sync with the idea.</p>
+    </section>
+
+    <section>
+      <h2>Format</h2>
+      <p>The string follows the familiar <code>AppName/Version (Environment; Attributes)</code> rhythm. Names are short, readable, and tuned to the principle you want to express.</p>
+    </section>
+
+    <section>
+      <h2>Metadata</h2>
+      <p>Tooling context lives under <code>.codex/settings.json</code> and <code>metadata/repro.json</code>. Keep <code>model_description</code> aligned with the repo’s narrative so anyone can understand why the profile exists.</p>
+    </section>
+
+    <section>
+      <h2>Quiet Truth</h2>
+      <p>The table below names every surface this branch touches so the story stays transparent.</p>
+      <table>
+        <tr>
+          <th>Area</th>
+          <th>Update</th>
+          <th>Why it matters</th>
+        </tr>
+        <tr>
+          <td>README</td>
+          <td>Documented the Python package, optional CLI extras, and quiet intent.</td>
+          <td>Orients contributors to the twin spec + utility focus.</td>
+        </tr>
+        <tr>
+          <td>pyproject.toml</td>
+          <td>Moved Click into base dependencies and declared dev extras.</td>
+          <td>The CLI and tests now install without separate files.</td>
+        </tr>
+        <tr>
+          <td>userstring/cli.py</td>
+          <td>Imported defaults lazily, reused constants, kept fallback tidy.</td>
+          <td>Ensures single source for defaults and minimal dependency churn.</td>
+        </tr>
+        <tr>
+          <td>userstring/generator.py</td>
+          <td>Sanitizes inputs, rejects unsafe characters, and avoids injections.</td>
+          <td>Shields the UA string from control characters or delimiters.</td>
+        </tr>
+        <tr>
+          <td>userstring/parser.py</td>
+          <td>Compiled a strict regex and anchored it with <code>fullmatch</code>.</td>
+          <td>Parses only well-formed strings, preventing trailing noise.</td>
+        </tr>
+        <tr>
+          <td>userstring/constants.py</td>
+          <td>Derives <code>DEFAULT_VERSION</code> from package metadata.</td>
+          <td>No drift between constants and package version.</td>
+        </tr>
+        <tr>
+          <td>Version truth</td>
+          <td>Reflects the actual package version (0.1.0) so the story stays honest.</td>
+          <td>Clarifies what “PostPhone/1.0” means in the repository context.</td>
+        </tr>
+        <tr>
+          <td>examples/ + tests/</td>
+          <td>Wrapped example in <code>main()</code>, added default test, gitkeep placeholders.</td>
+          <td>Keeps imports side-effect free and ensures coverage + clean repo.</td>
+        </tr>
+        <tr>
+          <td>Webpage</td>
+          <td>Represents the quiet truth in a calm table and tone.</td>
+          <td>Shows the reach of the project without visual noise.</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer>
+      <p>Clean writing. Clean structure. No noise.</p>
+    </footer>
+  </main>
+</body>
+</html>
