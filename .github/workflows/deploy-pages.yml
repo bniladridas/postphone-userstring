@@ -22,7 +22,7 @@ jobs:
           cp docs/webpage.html public/index.html
 
       - name: Setup Pages
-        uses: actions/setup-pages@v4
+        uses: actions/setup-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
