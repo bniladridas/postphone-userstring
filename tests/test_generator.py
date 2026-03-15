@@ -1,3 +1,4 @@
+from userstring.constants import DEFAULT_APP, DEFAULT_SYSTEM, DEFAULT_VERSION
 from userstring.generator import build_user_agent
 
 
@@ -8,4 +9,4 @@ def test_user_agent():
 
 def test_user_agent_defaults():
     ua = build_user_agent()
-    assert ua == "userstring/0.0.1 (unknown)"
+    assert ua == f"{DEFAULT_APP}/{DEFAULT_VERSION} ({DEFAULT_SYSTEM})"

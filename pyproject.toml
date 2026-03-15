@@ -5,10 +5,10 @@ description = "Utility for generating user strings and user-agent headers"
 authors = [{name = "Niladri Das"}]
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = ["click>=8.1"]
 
 [project.scripts]
 userstring = "userstring.cli:main"
 
 [project.optional-dependencies]
-cli = ["click"]
 dev = ["pytest"]

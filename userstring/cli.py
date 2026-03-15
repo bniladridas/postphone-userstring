@@ -1,4 +1,3 @@
-import argparse
 from .constants import DEFAULT_APP, DEFAULT_SYSTEM, DEFAULT_VERSION
 from .generator import build_user_agent
 
@@ -19,6 +18,8 @@ if click is not None:
         click.echo(ua)
 else:
     def main():
+        import argparse
+
         parser = argparse.ArgumentParser(description="Build a user string")
         parser.add_argument("--app", default=DEFAULT_APP)
         parser.add_argument("--version", default=DEFAULT_VERSION)
