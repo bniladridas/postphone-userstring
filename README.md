@@ -15,8 +15,8 @@ The `userstring` package delivers the same format as a tiny Python API and CLI. 
 metadata/
     JSON and tooling context; see reference/metadata-management.md for alignment notes
 
-webpage.html
-    Clean HTML introduction to the Project’s tone and structure
+docs/webpage.html
+    Full-page summary that records the truth of every touched area
 
 spec/
     Formal rules for the string format
